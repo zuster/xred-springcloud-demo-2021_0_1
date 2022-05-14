@@ -1,0 +1,9 @@
+server:
+  port: 10011
+spring:
+  application:
+    name: xred-service-discovery-nacos-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848

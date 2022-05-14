@@ -1,0 +1,10 @@
+zookeeper 2181
+nacos 8848
+xred-service-discovery-nacos-provider 10011
+xred-service-discovery-nacos-consumer 10012
+xred-service-discovery-eureka-server 10013
+xred-service-discovery-eureka-provider 10014
+xred-service-discovery-eureka-consumer 10015
+xred-service-discovery-eureka-consumer-reactive 10016
+xred-service-discovery-zookeeper-provider 10017
+xred-service-discovery-zookeeper-consumer 10018

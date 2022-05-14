@@ -1,0 +1,9 @@
+server:
+  port: 10015
+spring:
+  application:
+    name: xred-service-discovery-eureka-consumer
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10013/eureka

@@ -1,0 +1,9 @@
+server:
+  port: 10018
+spring:
+  application:
+    name: xred-service-discovery-zookeeper-consumer
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:2181
