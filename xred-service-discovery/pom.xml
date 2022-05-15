@@ -22,6 +22,8 @@
         <module>xred-service-discovery-eureka-consumer-reactive</module>
         <module>xred-service-discovery-zookeeper-provider</module>
         <module>xred-service-discovery-zookeeper-consumer</module>
+        <module>xred-service-discovery-consul-provider</module>
+        <module>xred-service-discovery-consul-consumer</module>
     </modules>
 
     <build>
