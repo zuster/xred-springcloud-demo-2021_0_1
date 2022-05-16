@@ -47,7 +47,10 @@
     </dependencyManagement>
 
     <modules>
+        <!--    服务注册-发现    -->
         <module>xred-service-discovery</module>
+        <!--    服务监控        -->
+        <module>xred-service-monitor</module>
     </modules>
 
     <dependencies>

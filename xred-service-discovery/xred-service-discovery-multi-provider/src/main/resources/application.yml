@@ -1,0 +1,23 @@
+server:
+  port: 10021
+spring:
+  application:
+    name: xred-service-discovery-multi-provider
+  autoconfigure:
+    exclude: org.springframework.cloud.client.serviceregistry.ServiceRegistryAutoConfiguration,org.springframework.cloud.client.serviceregistry.AutoServiceRegistrationAutoConfiguration
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10013/eureka
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always

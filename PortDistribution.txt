@@ -11,3 +11,5 @@ xred-service-discovery-zookeeper-provider 10017
 xred-service-discovery-zookeeper-consumer 10018
 xred-service-discovery-consul-provider 10019
 xred-service-discovery-consul-consumer 10020
+xred-service-discovery-multi-provider 10021
+xred-service-discovery-multi-consumer 10022

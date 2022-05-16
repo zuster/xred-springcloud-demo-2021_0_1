@@ -7,3 +7,11 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always

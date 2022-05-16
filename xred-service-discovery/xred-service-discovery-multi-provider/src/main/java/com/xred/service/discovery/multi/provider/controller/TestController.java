@@ -1,4 +1,4 @@
-package com.xred.service.discovery.nacos.provider.controller;
+package com.xred.service.discovery.multi.provider.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,6 +15,6 @@ import javax.servlet.http.HttpServletRequest;
 public class TestController {
     @GetMapping("/echo")
     public String echo(HttpServletRequest request) {
-        return "echo: " + request.getParameter("name") + " - by Nacos";
+        return "echo: " + request.getParameter("name");
     }
 }
