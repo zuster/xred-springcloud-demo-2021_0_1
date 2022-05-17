@@ -3,10 +3,22 @@ server:
 spring:
   application:
     name: xred-service-discovery-multi-consumer
-#  cloud:
-#    nacos:
-#      discovery:
-#        server-addr: localhost:8848
+  autoconfigure:
+    exclude: org.springframework.cloud.client.serviceregistry.ServiceRegistryAutoConfiguration,org.springframework.cloud.client.serviceregistry.AutoServiceRegistrationAutoConfiguration
+  nacos:
+    discovery:
+      server-addr: localhost:8848
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        register: true
+        instance-id: ${spring.application.name}-01
+        service-name: ${spring.application.name}
+        port: ${server.port}
+        prefer-ip-address: true
+        ip-address: ${spring.cloud.client.ip-address}
 eureka:
   client:
     service-url:

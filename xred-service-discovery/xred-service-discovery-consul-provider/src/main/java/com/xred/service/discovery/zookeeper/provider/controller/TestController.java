@@ -15,6 +15,6 @@ import javax.servlet.http.HttpServletRequest;
 public class TestController {
     @GetMapping("/echo")
     public String echo(HttpServletRequest request) {
-        return "echo: " + request.getParameter("name");
+        return "echo: " + request.getParameter("name") + " - by Consul";
     }
 }

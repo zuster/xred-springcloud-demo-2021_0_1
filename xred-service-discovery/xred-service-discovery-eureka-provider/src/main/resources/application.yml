@@ -2,8 +2,17 @@ server:
   port: 10014
 spring:
   application:
-    name: xred-service-discovery-eureka-provider
+#    name: xred-service-discovery-eureka-provider
+    name: xred-service-discovery-multi-provider
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:10013/eureka
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always

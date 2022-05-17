@@ -2,7 +2,8 @@ server:
   port: 10011
 spring:
   application:
-    name: xred-service-discovery-nacos-provider
+#    name: xred-service-discovery-nacos-provider
+    name: xred-service-discovery-multi-provider
   cloud:
     nacos:
       discovery:

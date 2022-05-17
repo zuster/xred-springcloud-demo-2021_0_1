@@ -46,7 +46,7 @@ public class HelloController {
                 () -> new IllegalStateException("no " + SERVICE_NAME + " instance available")
         );
         return restTemplate.getForObject(
-                "http://" + serviceInstance.getHost() + ":" + serviceInstance.getPort() + "/echo?name=multi"
+                "http://" + serviceInstance.getHost() + ":" + serviceInstance.getPort() + "/echo?name=hello"
                 , String.class
         );
     }
