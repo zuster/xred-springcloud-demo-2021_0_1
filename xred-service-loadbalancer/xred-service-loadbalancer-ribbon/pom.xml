@@ -4,26 +4,29 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
+        <artifactId>xred-service-loadbalancer</artifactId>
         <groupId>com.xred</groupId>
-        <artifactId>xred-springcloud-demo-2021_0_1</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>xred-service-loadbalancer</artifactId>
+    <artifactId>xred-service-loadbalancer-ribbon</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>pom</packaging>
-
-    <modules>
-        <module>xred-service-loadbalancer-myself</module>
-        <module>xred-service-loadbalancer-scl</module>
-        <module>xred-service-loadbalancer-ribbon</module>
-    </modules>
+    <name>xred-service-loadbalancer-ribbon</name>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-loadbalancer</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
@@ -32,13 +35,6 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -50,4 +46,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>
