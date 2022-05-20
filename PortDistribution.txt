@@ -13,6 +13,12 @@ xred-service-discovery-consul-provider 10019
 xred-service-discovery-consul-consumer 10020
 xred-service-discovery-multi-provider 10021
 xred-service-discovery-multi-consumer 10022
-xred-service-loadbalance-myself         10023
-xred-service-loadbalance-scl            10024
-xred-service-loadbalancer-ribbon        10025
+
+// 负载均衡
+xred-service-loadbalance-myself         10031
+xred-service-loadbalance-scl            10032
+xred-service-loadbalancer-ribbon        10033
+
+// 服务监控
+xred-service-monitor-actuator           10041
+xred-service-monitor-admin              10042

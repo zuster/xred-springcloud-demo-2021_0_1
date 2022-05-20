@@ -1,5 +1,5 @@
 server:
-  port: 10023
+  port: 10031
 spring:
   application:
     name: xred-service-loadbalance-myself

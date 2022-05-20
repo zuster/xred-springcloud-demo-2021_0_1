@@ -1,5 +1,5 @@
 server:
-  port: 10025
+  port: 10033
 spring:
   application:
     name: xred-service-loadbalance-ribbon
