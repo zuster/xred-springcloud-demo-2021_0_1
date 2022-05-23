@@ -43,6 +43,19 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-pool2</artifactId>
+                <version>2.11.1</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.24</version>
+                <scope>provided</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -53,6 +66,8 @@
         <module>xred-service-monitor</module>
         <!--    负载均衡        -->
         <module>xred-service-loadbalancer</module>
+        <!--    消息服务        -->
+        <module>xred-service-message</module>
     </modules>
 
     <dependencies>

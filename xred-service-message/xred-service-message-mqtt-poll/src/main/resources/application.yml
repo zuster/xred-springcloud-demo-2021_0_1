@@ -1,0 +1,12 @@
+server:
+  port: 10052
+spring:
+  application:
+    name: xred-service-message-mqtt-poll
+mqtt:
+  client:
+    username: c8z9uua/server
+    password: Am8ir6fKUz7z7EdW
+    host: c8z9uua.mqtt.iot.gz.baidubce.com
+    port: 1883
+

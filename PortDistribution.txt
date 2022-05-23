@@ -1,24 +1,30 @@
+// 基础服务
 zookeeper 2181
 nacos 8848
 consul 8500
-xred-service-discovery-nacos-provider 10011
-xred-service-discovery-nacos-consumer 10012
-xred-service-discovery-eureka-server 10013
-xred-service-discovery-eureka-provider 10014
-xred-service-discovery-eureka-consumer 10015
+// 服务发现与订阅
+xred-service-discovery-nacos-provider           10011
+xred-service-discovery-nacos-consumer           10012
+xred-service-discovery-eureka-server            10013
+xred-service-discovery-eureka-provider          10014
+xred-service-discovery-eureka-consumer          10015
 xred-service-discovery-eureka-consumer-reactive 10016
-xred-service-discovery-zookeeper-provider 10017
-xred-service-discovery-zookeeper-consumer 10018
-xred-service-discovery-consul-provider 10019
-xred-service-discovery-consul-consumer 10020
-xred-service-discovery-multi-provider 10021
-xred-service-discovery-multi-consumer 10022
+xred-service-discovery-zookeeper-provider       10017
+xred-service-discovery-zookeeper-consumer       10018
+xred-service-discovery-consul-provider          10019
+xred-service-discovery-consul-consumer          10020
+xred-service-discovery-multi-provider           10021
+xred-service-discovery-multi-consumer           10022
 
 // 负载均衡
-xred-service-loadbalance-myself         10031
-xred-service-loadbalance-scl            10032
-xred-service-loadbalancer-ribbon        10033
+xred-service-loadbalance-myself                 10031
+xred-service-loadbalance-scl                    10032
+xred-service-loadbalancer-ribbon                10033
 
 // 服务监控
-xred-service-monitor-actuator           10041
-xred-service-monitor-admin              10042
+xred-service-monitor-actuator                   10041
+xred-service-monitor-admin                      10042
+
+// 消息服务
+xred-service-message-mqtt                       10051
+xred-service-message-mqtt-poll                  10052
