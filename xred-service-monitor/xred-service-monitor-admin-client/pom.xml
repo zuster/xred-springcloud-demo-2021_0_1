@@ -9,9 +9,9 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>xred-service-monitor-admin-server</artifactId>
+    <artifactId>xred-service-monitor-admin-client</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>xred-service-monitor-admin-server</name>
+    <name>xred-service-monitor-admin-client</name>
 
     <dependencies>
         <dependency>
@@ -27,7 +27,7 @@
 
         <dependency>
             <groupId>de.codecentric</groupId>
-            <artifactId>spring-boot-admin-starter-server</artifactId>
+            <artifactId>spring-boot-admin-starter-client</artifactId>
             <version>${spring-boot-admin.version}</version>
         </dependency>
 

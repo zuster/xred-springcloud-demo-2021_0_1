@@ -1,0 +1,16 @@
+server:
+  port: 10043
+spring:
+  application:
+    name: xred-service-monitor-admin-client
+  boot:
+    admin:
+      client:
+        # 配置Admin服务器的地址
+        url: http://localhost:10042
+management:
+  endpoints:
+    web:
+      exposure:
+        # 打开客户端Actuator的监控
+        include: "*"
