@@ -16,7 +16,7 @@
 
     <modules>
         <module>xred-service-monitor-actuator</module>
-        <module>xred-service-monitor-admin</module>
+        <module>xred-service-monitor-admin-server</module>
     </modules>
 
     <build>

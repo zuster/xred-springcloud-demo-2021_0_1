@@ -9,9 +9,9 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>xred-service-monitor-admin</artifactId>
+    <artifactId>xred-service-monitor-admin-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>xred-service-monitor-admin</name>
+    <name>xred-service-monitor-admin-server</name>
 
     <dependencies>
         <dependency>
@@ -23,6 +23,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>de.codecentric</groupId>
+            <artifactId>spring-boot-admin-starter-server</artifactId>
         </dependency>
     </dependencies>
 

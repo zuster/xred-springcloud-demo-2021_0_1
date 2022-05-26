@@ -23,7 +23,8 @@ xred-service-loadbalancer-ribbon                10033
 
 // 服务监控
 xred-service-monitor-actuator                   10041
-xred-service-monitor-admin                      10042
+xred-service-monitor-admin-server               10042
+xred-service-monitor-admin-client               10043
 
 // 消息服务
 xred-service-message-mqtt                       10051
