@@ -14,3 +14,6 @@ management:
       exposure:
         # 打开客户端Actuator的监控
         include: "*"
+  endpoint:
+    health:
+      show-details: always
