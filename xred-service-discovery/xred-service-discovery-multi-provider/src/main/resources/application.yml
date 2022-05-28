@@ -19,10 +19,10 @@ spring:
         port: ${server.port}
         prefer-ip-address: true
         ip-address: ${spring.cloud.client.ip-address}
-#eureka:
-#  client:
-#    service-url:
-#      defaultZone: http://localhost:10013/eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10013/eureka
 management:
   endpoints:
     web:
