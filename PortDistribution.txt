@@ -29,3 +29,11 @@ xred-service-monitor-admin-client               10043
 // 消息服务
 xred-service-message-mqtt                       10051
 xred-service-message-mqtt-poll                  10052
+
+// 配置管理
+xred-service-config-scc                          10061
+xred-service-config-nacos                        10062
+xred-service-config-zookeeper                    10063
+xred-service-config-consul                       10064
+xred-service-config-vault                        10065
+xred-service-config-baiduDisconf                 10066

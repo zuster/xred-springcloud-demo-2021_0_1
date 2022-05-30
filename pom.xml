@@ -69,6 +69,8 @@
         <module>xred-service-loadbalancer</module>
         <!--    消息服务        -->
         <module>xred-service-message</module>
+        <!--    配置中心        -->
+        <module>xred-service-config</module>
     </modules>
 
     <dependencies>

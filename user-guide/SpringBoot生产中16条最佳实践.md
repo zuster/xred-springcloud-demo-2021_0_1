@@ -1,7 +1,24 @@
-[toc]
----
+- [SpringBoot 生产中 16 条最佳实践](#springboot-%E7%94%9F%E4%BA%A7%E4%B8%AD-16-%E6%9D%A1%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5)
+  - [1、使用自定义 BOM 来维护第三方依赖](#1%E4%BD%BF%E7%94%A8%E8%87%AA%E5%AE%9A%E4%B9%89-bom-%E6%9D%A5%E7%BB%B4%E6%8A%A4%E7%AC%AC%E4%B8%89%E6%96%B9%E4%BE%9D%E8%B5%96)
+  - [2、使用自动配置](#2%E4%BD%BF%E7%94%A8%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE)
+  - [3、使用 Spring Initializr 来开始一个新的 Spring Boot 项目](#3%E4%BD%BF%E7%94%A8-spring-initializr-%E6%9D%A5%E5%BC%80%E5%A7%8B%E4%B8%80%E4%B8%AA%E6%96%B0%E7%9A%84-spring-boot-%E9%A1%B9%E7%9B%AE)
+  - [4、考虑为常见的组织问题创建自己的自动配置](#4%E8%80%83%E8%99%91%E4%B8%BA%E5%B8%B8%E8%A7%81%E7%9A%84%E7%BB%84%E7%BB%87%E9%97%AE%E9%A2%98%E5%88%9B%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE)
+  - [5、正确设计代码目录结构](#5%E6%AD%A3%E7%A1%AE%E8%AE%BE%E8%AE%A1%E4%BB%A3%E7%A0%81%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84)
+  - [6、保持 @Controller 的简洁和专注](#6%E4%BF%9D%E6%8C%81-controller-%E7%9A%84%E7%AE%80%E6%B4%81%E5%92%8C%E4%B8%93%E6%B3%A8)
+  - [7、围绕业务功能构建 @Service](#7%E5%9B%B4%E7%BB%95%E4%B8%9A%E5%8A%A1%E5%8A%9F%E8%83%BD%E6%9E%84%E5%BB%BA-service)
+  - [8、使数据库独立于核心业务逻辑之外](#8%E4%BD%BF%E6%95%B0%E6%8D%AE%E5%BA%93%E7%8B%AC%E7%AB%8B%E4%BA%8E%E6%A0%B8%E5%BF%83%E4%B8%9A%E5%8A%A1%E9%80%BB%E8%BE%91%E4%B9%8B%E5%A4%96)
+  - [9、保持业务逻辑不受 Spring Boot 代码的影响](#9%E4%BF%9D%E6%8C%81%E4%B8%9A%E5%8A%A1%E9%80%BB%E8%BE%91%E4%B8%8D%E5%8F%97-spring-boot-%E4%BB%A3%E7%A0%81%E7%9A%84%E5%BD%B1%E5%93%8D)
+  - [10、推荐使用构造函数注入](#10%E6%8E%A8%E8%8D%90%E4%BD%BF%E7%94%A8%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E6%B3%A8%E5%85%A5)
+  - [11、熟悉并发模型](#11%E7%86%9F%E6%82%89%E5%B9%B6%E5%8F%91%E6%A8%A1%E5%9E%8B)
+  - [12、加强配置管理的外部化](#12%E5%8A%A0%E5%BC%BA%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%A4%96%E9%83%A8%E5%8C%96)
+  - [13、提供全局异常处理](#13%E6%8F%90%E4%BE%9B%E5%85%A8%E5%B1%80%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86)
+  - [14、使用日志框架](#14%E4%BD%BF%E7%94%A8%E6%97%A5%E5%BF%97%E6%A1%86%E6%9E%B6)
+  - [15、测试你的代码](#15%E6%B5%8B%E8%AF%95%E4%BD%A0%E7%9A%84%E4%BB%A3%E7%A0%81)
+  - [16、使用测试切片让测试更容易，并且更专注](#16%E4%BD%BF%E7%94%A8%E6%B5%8B%E8%AF%95%E5%88%87%E7%89%87%E8%AE%A9%E6%B5%8B%E8%AF%95%E6%9B%B4%E5%AE%B9%E6%98%93%E5%B9%B6%E4%B8%94%E6%9B%B4%E4%B8%93%E6%B3%A8)
+  - [总结](#%E6%80%BB%E7%BB%93)
+
 # SpringBoot 生产中 16 条最佳实践
-[by Bartosz Jedrzejewski, August 6, 2018](https://www.e4developer.com/2018/08/06/)
+[by -  Bartosz Jedrzejewski, August 6, 2018](https://www.e4developer.com/2018/08/06/)
 
 ![](https://tva1.sinaimg.cn/large/e6c9d24egy1h2ol0ny0klj20sg08hjs4.jpg)
 
