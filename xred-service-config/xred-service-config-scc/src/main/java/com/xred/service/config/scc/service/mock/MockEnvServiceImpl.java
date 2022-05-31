@@ -1,4 +1,4 @@
-package com.xred.service.config.scc.service.impl;
+package com.xred.service.config.scc.service.mock;
 
 import com.xred.service.config.scc.service.IEnvService;
 import org.springframework.beans.factory.annotation.Value;
@@ -12,8 +12,8 @@ import org.springframework.stereotype.Service;
  * @date 2022/5/30 11:27 PM
  */
 @Service
-@Profile(value = "prod")
-public class EnvServiceImpl implements IEnvService {
+@Profile(value = "test")
+public class MockEnvServiceImpl implements IEnvService {
     @Value("${custom.welcome}")
     private String welcome;
 

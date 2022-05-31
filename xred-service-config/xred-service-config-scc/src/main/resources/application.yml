@@ -4,7 +4,7 @@ spring:
   application:
     name: xred-service-config-scc
   profiles:
-    active: test
+    active: prod
 management:
   endpoints:
     web:

@@ -1,0 +1,2 @@
+参考资料
+springboot 整合nacos 配置及注册中心完整版 - https://www.codenong.com/cs106103743/
