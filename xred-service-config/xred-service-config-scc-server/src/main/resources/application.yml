@@ -1,0 +1,16 @@
+server:
+  port: 10060
+spring:
+  application:
+    name: xred-service-config-scc-server
+  profiles:
+    active: native
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+

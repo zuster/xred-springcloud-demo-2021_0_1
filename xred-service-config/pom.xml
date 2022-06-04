@@ -15,8 +15,10 @@
     <packaging>pom</packaging>
 
     <modules>
-        <!--    Spring Cloud Config    -->
-        <module>xred-service-config-scc</module>
+        <!--    Spring Cloud Config Client   -->
+        <module>xred-service-config-scc-client</module>
+        <!--    Spring Cloud Config Server   -->
+        <module>xred-service-config-scc-server</module>
         <!--    Alibaba Nacos    -->
         <module>xred-service-config-nacos</module>
         <!--    Apache Zookeeper    -->

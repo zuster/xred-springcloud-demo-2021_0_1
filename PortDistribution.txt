@@ -31,7 +31,8 @@ xred-service-message-mqtt                       10051
 xred-service-message-mqtt-poll                  10052
 
 // 配置管理
-xred-service-config-scc                          10061
+xred-service-config-scc-server                   10060
+xred-service-config-scc-client                   10061
 xred-service-config-nacos                        10062
 xred-service-config-zookeeper                    10063
 xred-service-config-consul                       10064
