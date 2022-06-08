@@ -3,8 +3,19 @@ server:
 spring:
   application:
     name: xred-service-config-scc-client
+  config:
+    import: optional:configserver:${spring.cloud.config.uri}
+  cloud:
+    config:
+#      discovery:
+#        enabled: true
+#        service-id: xred-service-config-scc-server
+      name: ${spring.application.name}
+      profile: test
+      uri: http://localhost:10060/
+      label: main
   profiles:
-    active: prod
+    active: test
 management:
   endpoints:
     web:
@@ -14,3 +25,7 @@ management:
     health:
       show-details: always
 
+custom:
+  user:
+    id: NativeID
+    name: NativeName

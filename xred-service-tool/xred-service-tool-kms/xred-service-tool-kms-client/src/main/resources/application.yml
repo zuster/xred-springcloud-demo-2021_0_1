@@ -1,0 +1,5 @@
+server:
+  port: 10902
+spring:
+  application:
+    name: xred-service-tool-kms-client

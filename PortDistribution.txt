@@ -38,3 +38,9 @@ xred-service-config-zookeeper                    10063
 xred-service-config-consul                       10064
 xred-service-config-vault                        10065
 xred-service-config-baiduDisconf                 10066
+
+
+// 其他
+// --- KMS Demo
+// xred-service-tool-kms-server                 10901
+// xred-service-tool-kms-client                 10902

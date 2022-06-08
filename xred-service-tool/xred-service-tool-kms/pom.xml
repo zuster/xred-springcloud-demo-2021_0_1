@@ -4,34 +4,24 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>xred-service-config</artifactId>
+        <artifactId>xred-service-tool</artifactId>
         <groupId>com.xred</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>xred-service-config-scc-client</artifactId>
+    <artifactId>xred-service-tool-kms</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>xred-service-config-scc-client</name>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>xred-service-tool-kms-server</module>
+        <module>xred-service-tool-kms-client</module>
+    </modules>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-config-client</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
 
         <dependency>
