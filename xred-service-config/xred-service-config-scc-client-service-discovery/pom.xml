@@ -9,9 +9,9 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>xred-service-config-scc-server</artifactId>
+    <artifactId>xred-service-config-scc-client-service-discovery</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>xred-service-config-scc-server</name>
+    <name>xred-service-config-scc-client-service-discovery</name>
 
     <dependencies>
         <dependency>
@@ -26,7 +26,7 @@
 
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-config-server</artifactId>
+            <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
 
         <dependency>

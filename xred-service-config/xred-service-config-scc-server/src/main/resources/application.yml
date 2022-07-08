@@ -4,18 +4,30 @@ spring:
   application:
     name: xred-service-config-scc-server
   profiles:
-    active: cloud
+    active: native
 #    active: cloud,native
   cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        instance-id: ${spring.application.name}:${server.port}
+        service-name: ${spring.application.name}
+        port: ${server.port}
+        prefer-ip-address: true
+        ip-address: ${spring.cloud.client.ip-address}
     config:
+#      server:
+#        git:
+#          uri: https://github.com/zuster/xred-springcloud-demo-config-repo
+#          default-label: main
+#          # 需要在本地配置ssh的公钥,如果不配置需要忽略公钥检查
+#          strict-host-key-checking: false
+#          # 本地文件被污染时强制拉取
+#          force-pull: true
       server:
-        git:
-          uri: https://github.com/zuster/xred-springcloud-demo-config-repo
-          default-label: main
-          # 需要在本地配置ssh的公钥,如果不配置需要忽略公钥检查
-          strict-host-key-checking: false
-          # 本地文件被污染时强制拉取
-          force-pull: true
+        native:
+          search-locations: classpath:/config/
 management:
   endpoints:
     web:

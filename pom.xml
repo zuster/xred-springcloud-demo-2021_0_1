@@ -77,6 +77,8 @@
         <module>xred-service-message</module>
         <!--    配置中心        -->
         <module>xred-service-config</module>
+        <!--    断路器    -->
+        <module>xred-service-breaker</module>
 
         <module>xred-service-tool</module>
     </modules>

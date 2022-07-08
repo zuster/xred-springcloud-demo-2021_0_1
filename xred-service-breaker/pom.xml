@@ -10,28 +10,14 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>xred-service-config</artifactId>
+    <artifactId>xred-service-breaker</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <modules>
-        <!--    Spring Cloud Config Client   -->
-        <module>xred-service-config-scc-client</module>
-        <!--    Spring Cloud Config Server   -->
-        <module>xred-service-config-scc-server</module>
-        <!--    Alibaba Nacos    -->
-        <module>xred-service-config-nacos</module>
-        <!--    Apache Zookeeper    -->
-        <module>xred-service-config-zookeeper</module>
-        <!--    HashiCorp Consul    -->
-        <module>xred-service-config-consul</module>
-        <!--    HashiCorp Vault    -->
-        <module>xred-service-config-vault</module>
-        <!--    Baidu Disconf    -->
-        <module>xred-service-config-baiduDisconf</module>
-        <!-- Spring Cloud Config Client 与 Service Discovery 整合 -->
-        <module>xred-service-config-scc-client-service-discovery</module>
+        <module>xred-service-breaker-customer</module>
     </modules>
+
     <build>
         <plugins>
             <plugin>

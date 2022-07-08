@@ -4,14 +4,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>xred-service-config</artifactId>
+        <artifactId>xred-service-breaker</artifactId>
         <groupId>com.xred</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>xred-service-config-scc-server</artifactId>
+    <artifactId>xred-service-breaker-customer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>xred-service-config-scc-server</name>
+    <name>xred-service-breaker-customer</name>
 
     <dependencies>
         <dependency>
@@ -21,26 +21,10 @@
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-config-server</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-consul-discovery</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
     </dependencies>
-
     <build>
         <plugins>
             <plugin>

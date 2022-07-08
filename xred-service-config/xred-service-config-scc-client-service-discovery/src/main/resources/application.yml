@@ -1,0 +1,30 @@
+server:
+  port: 10067
+spring:
+  application:
+    name: xred-service-config-scc-client-service-discovery
+  profiles:
+    active: test
+  config:
+    import: "optional:configserver:"
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: xred-service-config-scc-server
+      fail-fast: true
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+        heartbeat:
+          enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always

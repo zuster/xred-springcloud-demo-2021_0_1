@@ -1,0 +1,5 @@
+server:
+  port: 10070
+spring:
+  application:
+    name: xred-service-breaker-customer
