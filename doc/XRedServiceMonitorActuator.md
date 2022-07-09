@@ -217,7 +217,7 @@ Spring Boot支持自定义端点，只需要在我们定义的类中使用@Endpo
 
 编写自定义端点类很简单，只需要在类前面使用@Endpoint注解，然后在类的方法上使用@ReadOperation、@WriteOperation或@DeleteOperation（分别对应HTTP中的GET、POST、DELETE）等注解获取、设置端点信息。
 
-参考[自定义获取时间Endpoint](./xred-service-monitor/xred-service-monitor-admin-client/src/main/java/com/xred/service/monitor/admin/client/endpoints/SystemTimeEndpoint.java)。
+参考[自定义获取时间Endpoint](../xred-service-monitor/xred-service-monitor-admin-client/src/main/java/com/xred/service/monitor/admin/client/endpoints/SystemTimeEndpoint.java)。
 
 配置好端点后，即可访问 http://localhost:10043/actuator/systemTime 查看配置信息。
 

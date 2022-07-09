@@ -21,12 +21,14 @@
 ### Consul
 ### 多注册多订阅模式
 
-## 负载均衡（Load Balancer）
+## 负载均衡 (Load Balancer)
 ### Spring Cloud LoadBalancer
 ### Netflix Ribbon
 
+## 断路器 (Circuit Breaker)
+
 ## 服务监控（Service Monitor）
-### [Spring Boot Actuator](./XRedServiceMonitorActuator.md)
+### [Spring Boot Actuator](doc/XRedServiceMonitorActuator.md)
 Actuator是Spring Boot提供的应用系统监控的开源框架，它是Spring Boot体系中非常重要的组件。它可以轻松实现应用程序的监控治理，支持通过众多REST接口、远程Shell和JMX收集应用的运行情况。
 
 ### [Spring Boot Admin](./XRedServiceMonitorAdmin.md)
