@@ -4,27 +4,37 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
+        <artifactId>xred-service-breaker</artifactId>
         <groupId>com.xred</groupId>
-        <artifactId>xred-springcloud-demo-2021_0_1</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>xred-service-breaker</artifactId>
+    <artifactId>xred-service-breaker-hystrix</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>pom</packaging>
-
-    <modules>
-        <module>xred-service-breaker-customer</module>
-        <module>xred-service-breaker-sentinel</module>
-        <module>xred-service-breaker-hystrix</module>
-        <module>xred-service-breaker-resilience4j</module>
-    </modules>
+    <name>xred-service-breaker-hystrix</name>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+            <version>${spring-cloud-starter-netflix-hystrix.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
+            <version>${spring-cloud-starter-netflix-hystrix.version}</version>
         </dependency>
     </dependencies>
     <build>
@@ -32,13 +42,6 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

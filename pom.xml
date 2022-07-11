@@ -19,6 +19,7 @@
         <vertx.version>4.3.0</vertx.version>
         <xcf.version>3.5.2</xcf.version>
         <spring-boot-admin.version>2.6.3</spring-boot-admin.version>
+        <spring-cloud-starter-netflix-hystrix.version>2.2.10.RELEASE</spring-cloud-starter-netflix-hystrix.version>
     </properties>
 
     <dependencyManagement>

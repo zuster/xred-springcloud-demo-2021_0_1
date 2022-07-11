@@ -1,0 +1,5 @@
+server:
+  port: 10071
+spring:
+  application:
+    name: xred-service-breaker-sentinel

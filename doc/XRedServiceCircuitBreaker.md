@@ -22,6 +22,38 @@
 
 ### Netflix Hystrix
 
+| 配置项                                                 | 作用                                                     | 默认值                                                  |
+|-----------------------------------------------------|--------------------------------------------------------|------------------------------------------------------|
+| execution.isolation.strategy                        | 隔离策略：线程池隔离（THREAD）；信号量隔离（SEMAPHORE）                    | THREAD (线程池隔离)                                       |
+| execution.isolation.thread.timeoutInMilliseconds    | 执行超时时间，超时后进入 fallback 逻辑                               | 1000 (ms)                                            |
+| execution.timeout.enabled                           | 执行超时时间是否生效。开启后超时时间配置才会生效                               | true                                                 |
+| execution.isolation.thread.interruptOnTimeout       | 执行超时后是否可以被打断                                           | true                                                 |
+| execution.isolation.thread.interruptOnCancel        | 执行被取消时是否可以被打断                                          | true                                                 |
+| execution.isolation.semaphore.maxConcurrentRequests | 使用信号量隔离策略后最大QPS数                                       | 10 (QPS)                                             |
+| fallback.isolation.semaphore.maxConcurrentRequests  | getCallback()方法最大请求数                                   | 10                                                   |
+| fallback.enabled                                    | getCallback()方法是否生效                                    | true                                                 |
+| circuitBreaker.enabled                              | 熔断功能是否开启                                               | true                                                 |
+| circuitBreaker.requestVolumeThreshold               | 时间窗口内最小能触发熔断的请求数（如果时间窗口内没有达到最小请求数，即使异常比率达标，也不会触发熔断效果）  | 20                                                   |
+| circuitBreaker.sleepWindowInMilliseconds            | 熔断从 Open 状态进入 Half-Open 状态的时间                          | 5000 (ms)                                            |
+| circuitBreaker.errorThresholdPercentage             | 异常比率。时间窗口内最小能触发熔断的请求数中错误请求数占比                          | 50 (百分比)                                             |
+| circuitBreaker.forceOpen                            |||
+| circuitBreaker.forceClosed                          |||
+| metrics.rollingStats.timeInMilliseconds             |||
+| metrics.rollingStats.numBuckets                     |||
+| metrics.rollingPercentile.enabled                   |||
+| metrics.rollingPercentile.timeInMilliseconds        |||
+| metrics.rollingPercentile.numBuckets                |||
+| metrics.rollingPercentile.bucketSize                |||
+| metrics.healthSnapshot.intervalInMilliseconds       |||
+| requestCache.enabled                                || true                                                   |
+| requestLog.enabled                                  | 每次 HystrixCommand 执行都会被日志记录                            | true                                                 |
+| coreSize                                            | 使用线程池隔离策略时核心线程数                                        | 10                                                   |
+| maximumSize                                         | 线程池最大线程数                                               | 10                                                   |
+| maxQueueSize                                        | 线程池队列长度                                                | -1 (使用 SynchronousQueue 队列，否则使用 LinkedBlockingQueue) |
+| queueSizeRejectionThreshold                         | 队列拒绝阈值，如果设置该值，线程池内的队列长度无效 (maxQueueSize 参数等于 -1，该配置无效) | 5 (队列长度)                                             |
+| keepAliveTimeMinutes                                | 核心线程数小于最大线程数时，那些多出来的线程的存活时间                            | 1 min                                                |
+| allowMaximumSizeToDivergeFromCoreSize               | 设置为 true 时，当最大线程池比核心线程池数小时，最大线程数会使用核心线程数               | false                                                |
+
 ### Resilience4j
 
 ## 应用

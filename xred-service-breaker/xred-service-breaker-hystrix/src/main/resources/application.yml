@@ -1,0 +1,16 @@
+server:
+  port: 10072
+spring:
+  application:
+    name: xred-service-breaker-hystrix
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: 127.0.0.1

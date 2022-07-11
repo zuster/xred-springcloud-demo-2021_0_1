@@ -42,6 +42,7 @@ xred-service-config-scc-client-service-discovery 10067
 
 // 断路器
 xred-service-breaker-customer                   10070
+xred-service-breaker-sentinel                   10071
 
 // 其他
 // --- KMS Demo
